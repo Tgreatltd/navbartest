@@ -1,0 +1,79 @@
+*{
+    list-style-type: none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+nav{
+    height: 80px;
+    width: 100%;
+    background-color: gray;
+}
+
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li{
+    display: inline-block;
+    margin: 0px 5px;
+}
+nav a{
+    color: white;
+    font-size: 20px;
+}
+
+.checkBtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+@media (max-width:791px){
+    .checkBtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: rgb(85, 79, 70);
+        opacity: 0.96;
+        top: 80px;
+        left: -100%;
+        /* left: 0; */
+        color: red;
+        text-align: center;
+        transition: all .5s linear;
+         /* display: none; */
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+    }
+
+    nav ul li a{
+        font-size: 20px;
+    }
+    #check:checked ~ul{
+      left: 0;
+     }
+}
+    
+section{
+    background: url(../animationclass/image/cities-removebg-preview.png) no-repeat;
+    background-size: cover;
+    height: calc(100vh - 20vh);
+    /* height: 80vh; */
+}
